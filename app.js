@@ -22,7 +22,7 @@ const app = express();
 app.use(cors({
   origin: '*',
 }));
-mongoose.connect(`mongodb://localhost:27017/decisioner`).then(() => {
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.nr0lu.mongodb.net/decisioner`).then(() => {
   console.log('database connected');
 });
 
